@@ -191,7 +191,7 @@ function addMessageToUI(type, content) {
     messageEl.innerHTML = `
         <div class="message-header">
             <div class="message-avatar ${type === 'user' ? 'user-avatar' : 'bot-avatar'}">
-                ${type === 'user' ? 'U' : 'TB'}
+                ${type === 'user' ? 'U' : 'CZY'}
             </div>
             <span class="message-author">${type === 'user' ? 'You' : 'Chatzy'}</span>
             <span class="message-time">${timeString}</span>
