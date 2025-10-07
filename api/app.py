@@ -8,7 +8,7 @@ import json
 
 load_dotenv()
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='../templates', static_folder='../static')
 app.secret_key = secrets.token_hex(16)  # Set a secret key for CSRF protection
 
 # Replace with your free Cohere API key (get one at https://dashboard.cohere.com/)
