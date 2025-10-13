@@ -49,7 +49,8 @@ def home():
         try:
             co = cohere.Client(COHERE_API_KEY)
             response = co.chat(
-                model='command-nightly',         # Use the latest free model
+                # model='command-nightly',         # Use the latest free model
+                model='command-a-03-2025',  
                 message=user_input,
                 max_tokens=1000,
                 temperature=0.7
@@ -109,7 +110,8 @@ def api_chat():
 
         co = cohere.Client(COHERE_API_KEY)
         response = co.chat(
-            model='command-nightly',
+            # model='command-nightly',
+            model='command-a-03-2025',
             message=user_input,
             max_tokens=3000,
             temperature=0.7
