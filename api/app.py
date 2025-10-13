@@ -8,7 +8,7 @@ import json
 
 load_dotenv()
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='../templates', static_folder='../static')
 app.secret_key = secrets.token_hex(16)  # Set a secret key for CSRF protection
 
 # Replace with your free Cohere API key (get one at https://dashboard.cohere.com/)
@@ -51,7 +51,7 @@ def home():
             response = co.chat(
                 model='command-nightly',         # Use the latest free model
                 message=user_input,
-                max_tokens=300,
+                max_tokens=1000,
                 temperature=0.7
             )
             output = response.text
@@ -111,7 +111,7 @@ def api_chat():
         response = co.chat(
             model='command-nightly',
             message=user_input,
-            max_tokens=300,
+            max_tokens=3000,
             temperature=0.7
         )
         bot_response = response.text
