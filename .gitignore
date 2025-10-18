@@ -91,3 +91,4 @@ static/__pycache__/
 # WSGI
 *.wsgi
 
+.env
